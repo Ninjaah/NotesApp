@@ -3,6 +3,7 @@
 	xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Create New Note</title>
 <link rel="stylesheet" type="text/css" media="all" href="style.css" th:href="@{style.css}" />
 </head>
@@ -13,21 +14,21 @@
 		<form action="#" th:action="@{/save}" th:object="${product}"
 			method="post">
 
-			<table border="0" cellpadding="10">
+			<table>
 				<tr>
-					<td>Title:</td>
-					<td><input type="text" th:field="*{title}" /></td>
+					<td class="editSave">Title:</td>
+					<td class="editSave"><input type="text" th:field="*{title}" /></td>
 				</tr>
 				<tr>
-					<td>Content:</td>
-					<td><textarea type="text" th:field="*{content}">  </textarea></td>
+					<td class="editSave">Content:</td>
+					<td class="editSave"><textarea type="text" th:field="*{content}">  </textarea></td>
 				</tr>
 				<tr>
-					<td>Shared with:</td>
-					<td><input type="text" th:field="*{shared}" /></td>
+					<td class="editSave">Shared with:</td>
+					<td class="editSave"><input type="text" th:field="*{shared}" /></td>
 				</tr>								
 				<tr>
-					<td colspan="2"><button type="submit">Save</button> </td>
+					<td colspan="2" class="editSave" > <button type="submit">Save</button> </td>
 				</tr>
 			</table>
 		</form>
