@@ -4,13 +4,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Note Manager</title>
+<title>Notes App</title>
 <link rel="stylesheet" type="text/css" media="all" href="style.css" th:href="@{style.css}" />
 </head>
 <body>
 <div align="center">
     <h1>List of Notes</h1>
     <a href="new">Create New Product</a>
+    <a href="login">Log in</a>
     <br/><br/>
     <table>
         <thead>
@@ -30,7 +31,6 @@
                 <td th:text="${product.shared}">Shared with</td>
                 <td nowrap>
                 	<a class="action" th:href="@{'/edit/' + ${product.id}}">Edit</a>
-                    <a class="action" th:href="@{'/share/' + ${product.id}}">Share</a>
                 	<a class="action" th:href="@{'/delete/' + ${product.id}}">X</a>
                 </td>
             </tr>
