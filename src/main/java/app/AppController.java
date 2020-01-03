@@ -42,6 +42,13 @@ public class AppController {
 		return "redirect:/";
 	}
 	
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	public String registeruser(@ModelAttribute("register") User newUser) {
+		userService.save(newUser);
+		
+		return "redirect:/";
+	}
+	
 	@RequestMapping("/edit/{id}")
 	public ModelAndView showEditProductPage(@PathVariable(name = "id") int id) {
 		ModelAndView mav = new ModelAndView("edit_note");
@@ -55,20 +62,6 @@ public class AppController {
 	public String deleteProduct(@PathVariable(name = "id") int id) {
 		noteService.delete(id);
 		return "redirect:/";		
-	}
-	
-	@RequestMapping("/login")
-	public String showLogInPage(Model model) {
-		User user = new User();
-		model.addAttribute("login", user); 
-
-		return "login";
-	}
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String saveUser(@ModelAttribute("user") User user) {
-		userService.save(user);
-
-		return "redirect:/";
 	}
 	
 }

@@ -8,10 +8,17 @@
 <link rel="stylesheet" type="text/css" media="all" href="style.css" th:href="@{style.css}" />
 </head>
 <body>
+        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+          <form>
+           <a href="register" class="button" >Register</a>
+        </form>
 <div align="center">
     <h1>List of Notes</h1>
     <a href="new">Create New Product</a>
-    <a href="login">Log in</a>
+    <a href="login" >Log in</a>
     <br/><br/>
     <table>
         <thead>

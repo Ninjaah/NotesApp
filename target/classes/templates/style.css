@@ -4,6 +4,7 @@ table {
 
 th {
 	padding: 1%;
+	white-space: nowrap;
 }
 
 td {
