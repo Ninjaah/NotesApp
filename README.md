@@ -1,7 +1,7 @@
 # NotesApp
 App for shared notes and shopping lists
 
-###### Project in progress
+###### **Project in progress**
   
 Goals of the project  
 The user needs to be able to create an account  
