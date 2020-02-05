@@ -1,7 +1,7 @@
 # NotesApp
 App for shared notes and shopping lists
 
-Project in progress - expected to be online by the end of January  
+###### Project in progress
   
 Goals of the project  
 The user needs to be able to create an account  
